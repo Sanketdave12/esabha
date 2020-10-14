@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/mypost.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="p-4">
+        <h3>Profiles</h3>
+    <br>
+    <form class="form-inline">
+        <input class="form-control mr-3" value="{{ request.GET.si }}" type="text" name="si" placeholder="Search" />
+        <input class="btn btn-primary mr-3 my-3" type="submit" value="Search" />
+    </form>
+    <br>
+    
+    <table class="table ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+            
+    {% for i in myprofile_list %}
+        <tr>
+            <td class="">{{ i.name}}</td>
+            <td>{{ i.age}}</td>
+            <td>{{ i.gender}}</td>
+            <td>
+                <a class="btn btn-success btn-sm" href="/social/myprofile/{{i.id}}">Read More</a>
+                {% if i.followed %}
+                <a class="btn btn-danger btn-sm" href="/social/myprofile/unfollow/{{i.id}}">Unfollow</a>
+                {% else %}
+                <a class="btn btn-primary btn-sm" href="/social/myprofile/follow/{{i.id}}">Follow</a>
+                {% endif%}
+            
+            </td>
+        </tr>  
+    
+    {% endfor %}
+    </table>
+    </div>
+</body>
+</html>
+
+{% endblock %}

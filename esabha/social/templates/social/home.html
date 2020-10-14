@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+
+</head>
+<body>
+    <div class="row text-justify ml-2">
+        <div class="col">
+            <h3>Home</h3>
+            <div class="p-4">
+               
+                <br>
+                <form class="form-inline">
+                    <input class="form-control mr-3" value="{{ request.GET.si }}" type="text" name="si" placeholder="Search" />
+                    <input class="btn btn-primary mr-3" type="submit" value="Search" />
+                    <a class="btn btn-dark " href="/social/mypost/create"><span class="fa fa-plus"></span><span id="new">  New Post</span></a>
+                </form>
+                <br>
+            
+                <div class="row">
+                    {% for i in mypost_list %}
+                    <div class="col-md-4 my-3">
+                        <div class="card text-center h-100">
+                            <img class="card-img-top img-fluid " src="/media/{{i.pic}}" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ i.subject}}</h4>
+                                <p class="card-text">{{ i.cr_date | date:"d/m/y"}}- {{i.uploaded_by}} 
+                                    {% if i.uploaded_by.pic %}
+                                  <img class="rounded-circle" style="width: 30px; height:30px" src="/media/{{i.uploaded_by.pic}}" > 
+                                    {% endif %}
+                                </p>
+                                
+                                {%if i.liked %}
+                                <a class="btn btn-danger btn-sm" href="/social/mypost/unlike/{{i.id}}"><span class="fa fa-thumbs-down"></span></a>
+                                {% else %}
+                                <a class="btn btn-primary btn-sm" href="/social/mypost/like/{{i.id}}"><span class="fa fa-thumbs-up"></span></a>
+                                {% endif %}
+                                <a class="btn btn-success btn-sm" href="/social/mypost/{{i.id}}">Read More</a>
+
+                                {% if user.is_superuser %}  
+                                <a class="btn btn-danger btn-sm" href="/social/mypost/delete/{{i.id}}"><span class="fa fa-trash"></span><span id="new">  Delete</span></a>
+                                {% endif %}
+                                {% if i.likecount %}  
+                                <span class="badge badge-info">Likes {{i.likecount}}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+    
+    
+    
+    
+    
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>
+{% endblock %}

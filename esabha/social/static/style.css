@@ -1,0 +1,170 @@
+@charset "ISO-8859-1";
+
+body{
+	background: linear-gradient(to right, #b92b27, #1565c0);
+	background-position: center;
+	background-size: auto;
+	background-repeat:no-repeat;
+	height: 100vh;
+  }
+
+.carousel-item img{
+	height: 300px;
+}
+.navbar{
+	font-size: x-large;
+}
+
+.navbar #s{
+	font-size: xx-large;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+input[type="text" i] {
+    padding: 1px 2px;
+}
+user agent stylesheet
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: transparent
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border-radius: 2px;
+}
+body {
+	
+	font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    background: linear-gradient(to right, #b92b27, #1565c0);
+}
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+  
+  ul li{
+	display:flex ;
+	margin-left: 5px ;
+  }
+  
+ .navbar ul li a{
+	text-decoration: none;
+	color: white;
+	padding : 2px 20px;
+	margin-top: 5px;
+	border: 1px solid white transperent;
+	transition: 0.6s ease;
+	border-radius: 15px;
+	font-size: 20px;
+	/* for the smoothness of pointer while moving on home , about , gallery and contact */
+  }
+  
+  
+  ul li a:hover{
+	color: black;
+	background-color: darkblue;
+  }
+ 
+  .myfooter{
+    font-size: medium ;
+	text-shadow: 2px 2px 2px black;
+	background: linear-gradient(to right, #1565c0, #b92b27);
+	margin-top: 35px;
+}
+
+.row .col .sd1 p{
+	position: absolute;
+	top: 40%;
+	left: 19%;
+	font-size: 50px;
+	font-weight:inherit ;
+	text-shadow: 2px 4px 6px red;
+    color: white;
+    z-index:10;
+}
+
+.fa-instagram{
+    background-image: linear-gradient(to left,red,blue);
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+          color: transparent;
+  }
+  .fa-facebook-official{
+    color:skyblue;
+  }  
+  .fa-youtube-play{
+    color: red;
+  }
+
+  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    width: 100%;
+    display: block;
+}

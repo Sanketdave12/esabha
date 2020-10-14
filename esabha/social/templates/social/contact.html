@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/contact.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            <h3 class="ml-4">Contact</h3>
+            
+        </div>
+    </div>
+
+    <div class="row"> 
+        <div class="col-sm-5 ml-4">
+            <form action="">
+                <label for="">Name:</label>
+                <input class="form-control" type="text" name="name" placeholder="Enter Your Name" required><br> 
+                <label for="">E-mail:</label>
+                <input class="form-control" type="email" name="email" placeholder="xyz@gmail.com" required><br> 
+                <label for="">Mobile No:</label>
+                <input class="form-control" type="tel" name="mobile_no" placeholder="Enter Your Mobile Number" required><br> 
+                <label for="">Message:</label>
+                <textarea class="form-control" name=""  placeholder="Query or something"></textarea><br>
+                <button class="btn1 btn btn-primary " type="submit">Submit </button>
+                            
+            </form>
+        </div>
+        <div class="col-sm-6 p-3">
+            <div class="embed-responsive embed-responsive-16by9 ">
+                
+                <iframe class="embed-responsive-item pt-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29203.065496549603!2d72.37160958189307!3d23.804969361984522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c5e92a90bc923%3A0x8c46edde038af419!2sUnjha%2C%20Gujarat%20384170!5e0!3m2!1sen!2sin!4v1602479790899!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

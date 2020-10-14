@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/mypost.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="p-4">
+        <div class="row">
+            <div class="col-sm-6">
+                <p><strong>Name:</strong>{{ myprofile.name}}</p>
+                <p><strong>Age :</strong>{{ myprofile.age}}</p>
+                <p><strong>Gender :</strong>{{ myprofile.gender}}</p>
+                <p><strong>Address :</strong>{{ myprofile.address}}</p>
+                <p><strong>Status :</strong>{{ myprofile.status}}</p>
+                <p><strong>Phone No :</strong>{{ myprofile.phone_no}}</p>
+                <p><strong>Description :</strong>{{ myprofile.description}}</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-fluid" src="/media/{{myprofile.pic}}" alt="">
+  
+            </div>
+        </div>
+        <hr>
+        
+        <a class="btn btn-dark" href="/social/myprofile">Back</a>
+    </div>
+</body>
+</html>
+
+{% endblock %}

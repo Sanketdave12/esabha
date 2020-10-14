@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/mypost.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="p-4">
+        <h3>My Post</h3>
+    <br>
+    <form class="form-inline">
+        <input class="form-control mr-3" value="{{ request.GET.si }}" type="text" name="si" placeholder="Search" />
+        <input class="btn btn-primary mr-3" type="submit" value="Search" />
+        <a class="btn btn-dark " href="/social/mypost/create"><span class="fa fa-plus"></span><span id="new">  New Post</span></a>
+    </form>
+    <br>
+    
+    <table class="table ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+            
+    {% for i in mypost_list %}
+        <tr>
+            <td class="">{{ i.subject}}</td>
+            <td>{{ i.cr_date | date:"d/m/y"}}</td>
+            <td>
+                <a class="btn btn-success btn-sm" href="/social/mypost/{{i.id}}">Read More</a>
+                <a class="btn btn-danger btn-sm" href="/social/mypost/delete/{{i.id}}"><span class="fa fa-trash"></span><span id="new">  Delete</span></a>
+            </td>
+        </tr>  
+    
+    {% endfor %}
+    </table>
+    </div>
+</body>
+</html>
+
+{% endblock %}

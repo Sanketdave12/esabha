@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/mypost.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="p-4">
+        <h3>{{ mypost.subject}}</h3>
+        <p><strong>Date :</strong>{{ mypost.cr_date | date:"d/m/y"}}</p>
+        <p><strong>Message :</strong>{{ mypost.msg }}</p>
+        <img class="img-fluid" src="/media/{{mypost.pic}}" alt="">
+        <hr>
+        
+        <a class="btn btn-dark" href="/social/mypost">Back</a>
+    </div>
+</body>
+</html>
+
+{% endblock %}
